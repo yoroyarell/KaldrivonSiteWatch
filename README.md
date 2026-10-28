@@ -23,7 +23,7 @@ Any other NETCONF client or VES collector can use the same interfaces.
 
 ## Status
 
-Current release: **0.6.0-beta.7** (pre-release). Download it from **Releases**. It is a beta: one NETCONF session is served at a time.
+Current release: **[0.6.0-beta.8](../../releases/tag/v0.6.0-beta.8)** (pre-release). It is a beta: one NETCONF session is served at a time.
 
 ## Flashing a probe
 
