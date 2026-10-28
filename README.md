@@ -33,7 +33,7 @@ You need a PC with Chrome or Edge and a USB cable.
 2. Open the flasher page in Chrome or Edge, connect the probe, pick the `.bin` file and click Flash.
 3. Use the Manage tab to set the Wi-Fi and the NETCONF login. The probe restarts and joins your Wi-Fi.
 
-`SHA256SUMS` in the release lets you check the files. Probes already running a recent build update themselves over the air with signed firmware, so you only need USB for the first flash.
+`SHA256SUMS` in the release lets you check the files. GitHub carries the baseline build. Newer builds (fixes and features) come to licensed probes over the air, and are also available to download in your account at https://portal.kaldrivon.com while the license's update period covers them; the flasher page can install those over USB too and keeps the probe's settings.
 
 ## Licensing
 
