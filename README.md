@@ -10,6 +10,17 @@ SiteWatch is a small network probe for remote sites, built on the M5Stack Atom L
 - Set up from a browser over USB, no tools to install.
 - Signed over-the-air updates.
 
+## Monitoring with Kaldrivon MiniSMO
+
+A probe connects to Kaldrivon MiniSMO as an external network function:
+
+- **Alarms** arrive as NETCONF notifications (`ietf-alarms`).
+- **Measurements** (gateway latency, jitter and loss, internet latency, DNS lookup time, Wi-Fi signal and drops) are read from the probe's YANG model or pushed as VES `perf3gpp` reports.
+- **Behind NAT or a firewall:** turn on Call Home. The probe opens the connection to MiniSMO, so no inbound port is needed at the site.
+- **Setup:** MiniSMO can provision the probe's VES destination itself, over NETCONF.
+
+Any other NETCONF client or VES collector can use the same interfaces.
+
 ## Status
 
 The first production release is not published yet. Release files will appear under **Releases** when it is.
