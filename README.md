@@ -23,7 +23,7 @@ Any other NETCONF client or VES collector can use the same interfaces.
 
 ## Status
 
-Current release: **0.6.0-beta.7** (pre-release). Download it from **Releases**. It is a beta: one NETCONF session is served at a time, and the license state is shown but does not switch any feature off.
+Current release: **0.6.0-beta.7** (pre-release). Download it from **Releases**. It is a beta: one NETCONF session is served at a time.
 
 ## Flashing a probe
 
@@ -37,7 +37,7 @@ You need a PC with Chrome or Edge and a USB cable.
 
 ## Licensing
 
-A new probe starts with a 30-day trial. A purchased license is permanent and is tied to the probe's Device ID. It is added in your Kaldrivon account at https://portal.kaldrivon.com. Update coverage has an end date; a probe keeps working after that, it just does not receive newer firmware. The probe raises minor, major and critical alarms as the end of the trial (14, 7 and 2 days) or of the update coverage (60, 30 and 7 days) approaches, and shows the days left on the Manage tab.
+A new probe starts with a 30-day trial. After the trial (plus 3 days) a probe without a license stops its NETCONF, Call Home and VES interfaces until a license is added; Wi-Fi, USB setup and the Manage page keep working so it can be activated. A purchased license is permanent and is tied to the probe's Device ID. It is added in your Kaldrivon account at https://portal.kaldrivon.com. Update coverage has an end date; a probe keeps working after that, it just does not receive newer firmware. The probe raises minor, major and critical alarms as the end of the trial (14, 7 and 2 days) or of the update coverage (60, 30 and 7 days) approaches, and shows the days left on the Manage tab.
 
 ## Third-party software
 
