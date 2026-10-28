@@ -5,7 +5,7 @@ SiteWatch is a small network probe for remote sites, built on the M5Stack Atom L
 ## What it does
 
 - Measures gateway latency, jitter and packet loss, internet reachability, DNS lookup time and Wi-Fi signal.
-- Raises alarms (gateway unreachable, internet unreachable, high packet loss, high latency, weak Wi-Fi) and clears them again.
+- Raises alarms (gateway unreachable, internet unreachable, high packet loss, high latency, weak Wi-Fi, trial or update coverage ending) and clears them again.
 - NETCONF over SSH (RFC 6241, 6242) with `ietf-alarms` notifications, Call Home (RFC 8071) for probes behind NAT, and optional VES push.
 - Set up from a browser over USB, no tools to install.
 - Signed over-the-air updates.
@@ -23,15 +23,21 @@ Any other NETCONF client or VES collector can use the same interfaces.
 
 ## Status
 
-The first production release is not published yet. Release files will appear under **Releases** when it is.
+Current release: **0.6.0-beta.7** (pre-release). Download it from **Releases**. It is a beta: one NETCONF session is served at a time, and the license state is shown but does not switch any feature off.
 
 ## Flashing a probe
 
-The flasher page and the firmware image will be published here with the first release. It runs in Chrome or Edge on a PC and talks to the probe over USB.
+You need a PC with Chrome or Edge and a USB cable.
+
+1. From the latest release, download `kaldrivon-probe-flasher.html` and `atom-probe-<version>-merged.bin`.
+2. Open the flasher page in Chrome or Edge, connect the probe, pick the `.bin` file and click Flash.
+3. Use the Manage tab to set the Wi-Fi and the NETCONF login. The probe restarts and joins your Wi-Fi.
+
+`SHA256SUMS` in the release lets you check the files. Probes already running a recent build update themselves over the air with signed firmware, so you only need USB for the first flash.
 
 ## Licensing
 
-A new probe starts with a 30-day trial. A purchased license is permanent and is tied to the probe's Device ID. It is added in your Kaldrivon account at https://portal.kaldrivon.com. Update coverage has an end date; a probe keeps working after that, it just does not receive newer firmware.
+A new probe starts with a 30-day trial. A purchased license is permanent and is tied to the probe's Device ID. It is added in your Kaldrivon account at https://portal.kaldrivon.com. Update coverage has an end date; a probe keeps working after that, it just does not receive newer firmware. The probe raises minor, major and critical alarms as the end of the trial (14, 7 and 2 days) or of the update coverage (60, 30 and 7 days) approaches, and shows the days left on the Manage tab.
 
 ## Third-party software
 
