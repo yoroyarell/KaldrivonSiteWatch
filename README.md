@@ -18,12 +18,13 @@ A probe connects to Kaldrivon MiniSMO as an external network function:
 - **Measurements** (gateway latency, jitter and loss, internet latency, DNS lookup time, Wi-Fi signal and drops) are read from the probe's YANG model or pushed as VES `perf3gpp` reports.
 - **Behind NAT or a firewall:** turn on Call Home. The probe opens the connection to MiniSMO, so no inbound port is needed at the site.
 - **Setup:** MiniSMO can provision the probe's VES destination itself, over NETCONF.
+- **Self-signed collectors:** the probe pins up to four collector certificates per address, so several MiniSMO instances can share one address and port. It adds a certificate only right after MiniSMO writes the address, and refuses any other.
 
 Any other NETCONF client or VES collector can use the same interfaces.
 
 ## Status
 
-Current release: **[0.6.0-beta.9](../../releases/tag/v0.6.0-beta.9)** (pre-release). It is a beta: one NETCONF session is served at a time.
+Current release: **[0.6.0-beta.10](../../releases/tag/v0.6.0-beta.10)** (pre-release). It is a beta: one NETCONF session is served at a time.
 
 ## Flashing a probe
 
